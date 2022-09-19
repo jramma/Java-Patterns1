@@ -23,7 +23,7 @@ public class Main {
 				break;
 			case 0:
 				System.out.println("bye");
-				default:
+			default:
 					System.out.println("Introduciste un numero incorrecto");
 			}
 		} while (decision != 0);
