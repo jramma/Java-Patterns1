@@ -1,6 +1,6 @@
 package n2ejercicio1;
 
-public class Adress {
+public class Adress implements Instancia{
 	private String adress;
 	private String city;
 	private String country;
@@ -33,5 +33,21 @@ public class Adress {
 		this.adress = adress;
 		this.city = city;
 		this.country = country;
+	}
+
+	@Override
+	public Phone writePhone() {
+		Phone phone = new Phone
+		(Entrada.leerInt("introduzca el prefijo de su pais"),
+		Entrada.leerInt("Introduzca su número de teléfono"));
+	System.out.println("El telefono "+ phone+ "ha sido añadido");	
+		return phone;
+	}
+
+	@Override
+	public Adress writeAdress() {
+		Adress adress=new Adress(Entrada.leerString("Introduzca su direccion (ej. c:calleejemplo 22)"),
+				Entrada.leerString("Introduzca su Ciudad"),this.country);	
+		return adress;
 	}
 }
