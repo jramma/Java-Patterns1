@@ -1,17 +1,19 @@
 package n2AbstractFactory;
 
-public class GermanAdress implements AddressPhoneFactory {
+public class GermanAdress implements InstanciaDeAgenda {
 
 	@Override
-	public int createPhone() {
-		// TODO Auto-generated method stub
-		return 0;
+	public Phone createPhone() {
+		Phone phone = new Phone( 49, Entrada.leerInt("Introduce el telefono"));
+		return phone;
 	}
 
 	@Override
-	public String createAdress() {
-		// TODO Auto-generated method stub
-		return null;
+	public Adress createAdress() {
+		Adress adress = new Adress("Germany",Entrada.leerString("Introduce la ciudad:"),Entrada.leerString("Introduzca la calle:"),Entrada.leerInt("Introcude el codigo postal:"));
+		return adress;
 	}
+
+
 
 }
