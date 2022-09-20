@@ -11,7 +11,7 @@ public class Accelerate implements VehicleComands {
 	
 	@Override
 	public void execute() {
-		vehicle.run();
+		vehicle.acelerate();
 	}
 
 }
